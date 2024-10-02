@@ -11,11 +11,11 @@ export default function Header() {
 
     const pageTitles: { [key: string]: string } = {
         '/': '',
-        '/contact': '/CONTACT',
-        '/blog': '/BLOG',
-        '/gallery': '/GALLERY',
-        '/videos': '/VIDEOS',
-        '/manga': '/MANGA',
+        '/contact': '| CONTACT',
+        '/blog': '| BLOG',
+        '/gallery': '| GALLERY',
+        '/videos': '| VIDEOS',
+        '/manga': '| MANGA',
       };
 
     const toggleMenu = () => {
@@ -40,15 +40,15 @@ export default function Header() {
     }, []);
 
     return (
-        <header className="bg-sky-950 text-white p-4">
-            <div className="flex justify-between items-center">
-                <h1 className="text-2xl tracking-wider font-light">
+        <header className="mix-blend-exclusion text-white p-4 ">
+            <div className="flex justify-between items-center ">
+                <h1 className="text-4xl drop-shawdow-xl tracking-wider font-light">
                     <Link href="/" className="hover:text-gray-400">
                         UNIWHALE
                     </Link>
                 </h1>
 
-                <h1 className="text-2xl tracking-widest font-bold ml-2">
+                <h1 className="text-4xl tracking-widest ml-2">
                     {pageTitles[currentPage]}
                 </h1>
                 
@@ -75,11 +75,11 @@ export default function Header() {
 
                 {/* Navigation Links */}
                 <ul
-                    className={`lg:flex lg:space-x-4 tracking-widest font-thin bg-sky-950 
+                    className={`lg:flex lg:space-x-4 tracking-widest font-thin text-xl
                     transition-all duration-300 ${isOpen ? 'absolute top-16 left-0 w-full flex flex-col space-y-4' : 'hidden'} 
                     lg:visible lg:h-auto lg:w-auto lg:space-y-0 lg:relative`}
                 >
-                    <li className="py-2 text-right mr-4 lg:py-0">
+                    <li className="py-2 text-right mr-4 lg:py-0 lg:mr-0 ">
                         <Link href="/contact" className="hover:text-gray-400">
                             Contact
                         </Link>
