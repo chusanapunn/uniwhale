@@ -40,10 +40,10 @@ export default function Header() {
     }, []);
 
     return (
-        <header className="mix-blend-exclusion text-white p-4 ">
+        <header className="mix-blend-exclusion text-white pt-4 px-4">
             <div className="flex justify-between items-center ">
                 <h1 className="text-4xl drop-shawdow-xl tracking-wider font-light">
-                    <Link href="/" className="hover:text-gray-400">
+                    <Link href="/" className="hover:text-gray-400 hover:animate-pulse">
                         UNIWHALE
                     </Link>
                 </h1>
@@ -58,7 +58,7 @@ export default function Header() {
                     className="block focus:outline-none ml-auto lg:hidden"
                 >
                     <svg
-                        className="w-6 h-6"
+                        className="w-6 h-6 hover:animate-pulse"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -76,15 +76,15 @@ export default function Header() {
                 {/* Navigation Links */}
                 <ul
                     className={`lg:flex lg:space-x-4 tracking-widest font-thin text-xl
-                    transition-all duration-300 ${isOpen ? 'absolute top-16 left-0 w-full flex flex-col space-y-4' : 'hidden'} 
+                    tra  ${isOpen ? ' ease-out absolute top-16 left-0 w-full flex flex-col space-y-4 z-50' : ' hidden'} 
                     lg:visible lg:h-auto lg:w-auto lg:space-y-0 lg:relative`}
                 >
-                    <li className="py-2 text-right mr-4 lg:py-0 lg:mr-0 ">
+                    <li className="py-2 text-right mt-4 mr-4 lg:py-0 lg:mt-0 lg:mr-0 ">
                         <Link href="/contact" className="hover:text-gray-400">
                             Contact
                         </Link>
                     </li>
-                    <li className="py-2 text-right mr-4 lg:py-0">
+                    <li className="py-2 text-right mr-4 lg:py-0 lg:mr-0">
                         <Link href="/blog" className="hover:text-gray-400">
                             Blog
                         </Link>
@@ -105,7 +105,11 @@ export default function Header() {
                         </Link>
                     </li>
                 </ul>
+                
             </div>
+            <hr
+                className={`my-4 h-2 ${isOpen ? 'pb-72' : ''}`}
+            />
         </header>
     );
 };

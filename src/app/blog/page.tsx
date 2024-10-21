@@ -1,8 +1,8 @@
 import React from 'react';
 /*
-import BlogForm from '../../components/BlogForm';
-import BlogList from '../../components/BlogList';
-*/
+import BlogForm from '../../components/BlogForm';*/
+import BlogList from '../components/BlogList';
+
 import Header from '../components/Header';
 
 const BlogPage = () => {
@@ -10,8 +10,8 @@ const BlogPage = () => {
     <div>
         <Header/>
             <h1 className="text-4xl font-bold">Blog</h1>
-            {/* <BlogForm />
-            <BlogList /> */}
+            {/* <BlogForm />*/}
+            {<BlogList /> }
     </div>
     );
 };
